@@ -1,0 +1,8 @@
+Acestea sunt mutarile care vor ajuta bucatarii sa mute tortul de 1 straturi
+
+Se muta stratul 1 al tortului din Platou argint pe Platou aur
+.
+.
+.
+Pentru a muta tortul va fi nevoie de 1 pasi
+Executia a durat 0.0 secunde

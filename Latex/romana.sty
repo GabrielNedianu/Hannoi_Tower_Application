@@ -1,0 +1,62 @@
+\def\rquotes{''}
+\def\rquote{'}
+\catcode`\'=\active
+\gdef'#1{\if\string#1a{\ifmmode\breve{a}\else\u{a}\fi}%
+\else\if\string#1A{\ifmmode\breve{A}\else\u{A}\fi}%
+\else\if\string#1i{\ifmmode\hat{\imath}\else\^{\i}\fi}%
+\else\if\string#1I{\ifmmode\hat{I}\else\^{I}\fi}%
+\else\if\string#1s{\ifmmode{s}\else\c{s}\fi}%
+\else\if\string#1S{\ifmmode{S}\else\c{S}\fi}%
+\else\if\string#1t{\ifmmode{t}\else\c{t}\fi}%
+\else\if\string#1T{\ifmmode{T}\else\c{T}\fi}%
+\else\if\string#1\rquote{\rquotes}%
+\else\typeout{Romanian accent error, single quote prefixing letter #1 !!!!!!}%
+\fi\fi\fi\fi\fi\fi\fi\fi\fi
+}
+\catcode`\"=\active
+\gdef"#1{\if\string#1a{\ifmmode\hat{a}\else\^{a}\fi}%
+\else\if\string#1A{\ifmmode\hat{A}\else\^{A}\fi}%
+%\else\if\string#1T{\ifmmode\hat{T}\else{\symbol{34}T}\fi}%
+%\else\typeout{Romanian accent error, double quote prefixing letter #1 !!!!!!}%
+\else{\symbol{34}#1}%
+\fi\fi}
+
+%\def\chaptername{Capitolul}
+%\def\@chapapp{Capitolul}
+%\def\@capapp{Cap.}
+\def\contentsname{Cuprins}
+%\def\tableofcontents{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+% \fi\chapter*{Cuprins\@mkboth{CUPRINS}{CUPRINS}}
+% \@starttoc{toc}\if@restonecol\twocolumn\fi}
+\def\partname{Partea}
+\def\refname{Referin'te}
+\def\bibname{Bibliografie}
+\def\abstractname{Rezumat}
+\def\appendixname{Anexa}
+\def\listfigurename{Lista Figurilor}
+\def\listtablename{Lista Tabelelor}
+\def\indexname{Index}
+\def\figurename{\bfseries Figura}
+\def\tablename{Tabelul}
+\def\partname{Partea}
+\def\pagename{Pagina}
+
+\def\jan{ianuarie}
+\def\feb{februarie}
+\def\mar{martie}
+\def\apr{aprilie}
+\def\mai{mai}
+\def\iun{iunie}
+\def\iul{iulie}
+\def\aug{august}
+\def\sep{septembrie}
+\def\oct{octombrie}
+\def\nov{noiembrie}
+\def\dec{decembrie}
+
+\def\azi{\number\day~\ifcase\month\or
+  ianuarie\or februarie\or martie\or aprilie\or
+  mai\or iunie\or iulie\or august\or septembrie\or
+  octombrie\or noiembrie\or decembrie\fi
+  \space\number\year}
+\def\today{\azi}
